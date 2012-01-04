@@ -4,6 +4,7 @@ Author : Marcin Ka³at http://mkalat.pl
 Notice : Some very small portions of code for operating on keyboard leds via dos device were taken from http://www.codeguru.com/cpp/w-p/system/keyboard/article.php/c2825/ . 
 Thanks to Mark Mc Ginty. Pieces of code taken from Mark McGinty might be released under other terms than this library, please be advised!
 
+Version : 0.0.15
 */
 
 
@@ -89,7 +90,7 @@ bool ScrollLockFlasherPlugin::load()
 {	
 	errlog.setFileName("slfp_log.txt"); 
 	errlog.open(QFile::WriteOnly | QFile::Text);
-	errlog.write("SCROLL LOCK FLASHER PLUGIN 0.0.14 - LOGGING STARTED \n");
+	errlog.write("SCROLL LOCK FLASHER PLUGIN 0.0.15 - LOGGING STARTED \n");
 
 	TlenPluginManager *pm = TlenPluginManager::getInstance();
 
@@ -139,7 +140,7 @@ QString ScrollLockFlasherPlugin::icon(int size) const
 QString ScrollLockFlasherPlugin::author() const
 {
 	QTextCodec *codec = QTextCodec::codecForName("Windows-1250");
-	return QString(codec->toUnicode("Marcin Ka³at 2010 - 2011"));
+	return QString(codec->toUnicode("Marcin Ka³at 2010 - 2012"));
 }
 
 QString ScrollLockFlasherPlugin::description() const
@@ -153,17 +154,17 @@ QString ScrollLockFlasherPlugin::description() const
 
 int ScrollLockFlasherPlugin::version() const
 {
-	return TLEN_PLUGIN_VERSION(0, 0, 14);
+	return TLEN_PLUGIN_VERSION(0, 0, 15);
 }
 
 QString ScrollLockFlasherPlugin::web() const
 {
-	return QString("http://www.mkalat.waw.pl");
+	return QString("http://mkalat.pl");
 }
 
 QString ScrollLockFlasherPlugin::email() const
 {
-	return QString("support@mkalat.waw.pl");
+	return QString("support@mkalat.pl");
 }
 QString ScrollLockFlasherPlugin::getLicenseName() const
 {
